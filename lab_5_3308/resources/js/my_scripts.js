@@ -127,6 +127,42 @@ function loadStatsPage()
 						
 					After setting all of the anchor tags, update the innerHTML of the dropdown menu.
 					As a note, the id for the dropdown menu is player_selector.
+
+
+	*/
+
+	function loadPlayersPage()
+	{
+		for (let index = 0; index < players.length; index++) 
+		{
+			var menu = document.getElementById("player_selector");
+			var aTag = document.createElement("a");
+			aTag.setAttribute('href', "#");
+			aTag.setAttribute('class',"dropdown-item");
+			aTag.innerText =  players[index].name;
+			menu.appendChild(aTag);
+			aTag.onclick = function(){switchPlayers(index)};
+		}
+
+	}
+
+
+	function switchPlayers(playerNum)
+	{
+		document.getElementById("player_img").setAttribute("src", players[playerNum].img);
+		document.getElementById("player_img").setAttribute("alt", players[playerNum].alt);
+		document.getElementById("p_year").innerHTML = players[playerNum].year;
+		document.getElementById("p_major").innerHTML = players[playerNum].major;
+		document.getElementById("g_played").innerHTML = players[playerNum].games_played;
+
+		document.getElementById("avg_p_yards").innerHTML = Math.round((players[playerNum].pass_yards)/players[playerNum].games_played);
+		document.getElementById("avg_r_yards").innerHTML = Math.round((players[playerNum].rushing_yards)/players[playerNum].games_played);
+		document.getElementById("avg_rec_yards").innerHTML = Math.round((players[playerNum].receiving_yards)/players[playerNum].games_played);
+
+
+	}
+
+	/*
 		
 		switchPlayers(playerNum) method:
 			parameters: 
@@ -150,5 +186,4 @@ function loadStatsPage()
 					  avg_r_yards   - the average number of rushing yards for the player's Buff career
 					  avg_rec_yards - the average number of receiving yards for the player's Buff career
 */
-				
-
+			
