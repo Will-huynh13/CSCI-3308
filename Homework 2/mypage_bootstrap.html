@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html>
+  <head>    
+    <title>Mypage_bootstrap.html</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="manage-cards.js"></script>
+  </head>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="home.html">
+      <img class="rounded-circle" src="imgs/cu_boulder_logo.jpg" alt="" width="30" height="30">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="mypage_bootstrap.html">Profile</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../Homework2/signup-modal/login.html">Sign Up Modal <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../Homework2/tic-tac-toe/tic-tac-toe.html">Tic Tac Toe game</a>
+        </li>
+      </ul>
+      <div class="form-inline my-2 my-lg-0">
+          <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Logout</button>
+      </div>
+    </div>
+  </nav>
+
+  <body>
+      <div class="container-fluid">
+          <h1>Huynh, Will <small class="text-secondary">-Software Developement and Tools</small></h1>
+          <div class="card">
+            <div class="card-header">
+                <p>
+                    I am studying computer science because I want to learn how to make applications that
+                    can possibly change the world. <strong>Three interesting facts about me are</strong> I like to modify cars, I am 1/4 chinese and last but not least, I am bilingual
+                </p>
+            </div>
+          </div>
+      </div>
+  </body>
+  <body>
+      <div class="container-fluid">
+            <h2>My Professional Profile</h2>
+            <a class="btn btn-outline-secondary" href="https://github.com/Will-huynh13" role="button"> Check out my Github!</a>
+            <div>
+                <img src="imgs/will.png" class="rounded-circle" alt="This is will sitting on the grass awkwardly">
+            </div>
+      </div>
+  </body>
+  <body>
+      <div class="container-fluid">
+        <h3>My Favorite Projects</h3>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name of the Project</th>
+                        <th scope="col">Technologies Used</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Simple Syscall</td>
+                        <td>C</td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Simple Linux Kernel Modules</td>
+                        <td>C</td>
+                        
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <th scope="row"> 3</th>
+                        <td>Oregon Trail Game</td>
+                        <td>C++</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+  </body>
+<div class="container-fluid">
+  <body>
+    <h3>
+        Interests
+        <a href="form.html" class="btn btn-info" role="button" style="margin-left: 38ch;">Add interest</a>
+    </h3>
+    <div style="margin-bottom: 10px;"></div>
+    <div class="card-deck" style="width: 60rem;">
+        <div class="card" style="width: auto;" id="interest1">
+            <img src="imgs/weights.jpg" class="card-img-top" alt="A picture of weights" width="320" height="300">
+            <div class="card-body">
+                <button type="button" class="btn btn-primary btn-sm " onclick="addCard(interest1)"></button>
+                <h5 class="card-title">Gym</h5>
+                <p class="card-text">I like to weight lift.</p>
+            </div>
+        </div>
+        <div class="card" style="width: auto;" id="interest2">
+            <img src="imgs/pc.jpg" class="card-img-top" alt="A picture of PC gaming" width="320" height="300">
+            <div class="card-body">
+                <button type="button" class="btn btn-primary btn-sm btn-circle" onclick="addCard(interest2)"></button>
+                <h5 class="card-title">PC gaming</h5>
+                <p class="card-text">I enjoy pc gaming on my free time.</p>
+            </div>
+        </div>
+        <div class="card" style="width: auto;" id="interest3">
+            <img src="imgs/car.jpg" class="card-img-top" alt="A picture of my car" width="320" height="300">
+            <div class="card-body">
+                <button type="button" class="btn btn-primary btn-sm btn-circle" onclick="addCard(interest3)"></button>
+                <h5 class="card-title">Moddifying cars</h5>
+                <p class="card-text">This is my car and I like to modify it.</p>
+            </div>
+        </div>
+    </div>
+</div>
+  </body>
+</div>
+</html>
